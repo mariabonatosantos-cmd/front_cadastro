@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs com API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<h1>Minha lista de animes</h1>
+<body>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="abrirTab(0)">Listar de animes</button>
+        <button class="tab-btn" onclick="abrirTab(1)">Adicionar anime</button>
+    </div>
+    <a id="logout" class="logout-link" onclick="logout()">Logout</a>
+
+    <!-- TAB 1 -->
+    <div class="tab-content active">
+        <h2>Animes listados</h2>
+
+        <div class="search-container">
+            <input type="text" id="busca_nome" placeholder="Buscar nome">
+            <button onclick="buscarClientes()">Buscar</button>
+            <button onclick="listarAnimes()" style="background: #6c757d;">Limpar</button>
+        </div>
+
+        <div id="listaClientes" class="anime-list"></div>
+    </div>
+
+    <!-- TAB 2 -->
+    <div class="tab-content">
+        <h2>Adicionar anime</h2>
+
+        <input type="text" id="anime_nome" placeholder="Nome">
+        <input type="text" id="anime_genero" placeholder="gênero">
+        <input type="number" id="anime_temporadas" placeholder="temporadas">
+        <input type="number" id="anime_classificacao" placeholder="classificação" min="0" max="10" step="0.1">
+
+
+        <button onclick="cadastrarCliente()">Adicionar a lista</button>
+
+        <div class="resultado" id="resultadoCliente"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
