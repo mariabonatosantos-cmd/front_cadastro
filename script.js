@@ -68,7 +68,7 @@ async function cadastrarCliente() {
         nome: document.getElementById("anime_nome").value,
         genero: document.getElementById("anime_genero").value,
         temporadas: document.getElementById("anime_temporadas").value,
-        classificacao: document.getElementById("anime_classicacao").value
+        classificacao: document.getElementById("anime_classificacao").value
     };
 
     try {

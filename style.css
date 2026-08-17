@@ -12,14 +12,21 @@ h1 {
 }
 .pag {
     background-image:url(Gemini_Generated_Image_jnwmorjnwmorjnwm.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 h3 {
-    color: #3f20f3;
-    margin-bottom: 20px;
-    font-family: 'arial black', sans-serif;
+    color: #1d1547;
+    margin-bottom: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: fixed;
+    margin-left: 440px;
+    font-size: 35px;
+
 }
 
 .tabs {
@@ -71,15 +78,17 @@ button {
 }
 .buttonfly {
     padding: 15px;
-    background: #3b4acc;
+    background: #9e60e4;
     color: white;
     border: none;
-    width: 100%;
+    width: 30%;
+    margin-left: 500px;
     cursor: pointer;
+    border-top: 75px;
     font-size: 16px;
-    border-radius: 10px;
-    text-align: right;
-    bottom: right;
+    border-radius: 60px;
+    position: fixed;
+    bottom: 150px;
 }
 
 .resultado {
