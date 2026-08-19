@@ -3,10 +3,15 @@ body {
     max-width: 700px;
     margin: 40px auto;
     background: #c59de6;
+    background-image: url('ef6e85d7b45af76890fdfbf668e60f86.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 h1 {
     text-align: center;
-    color: #440e8a;
+    color: #cebfe0;
     margin-bottom: 30px;
     font-family: 'arial black', sans-serif;
 }

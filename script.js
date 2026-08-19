@@ -65,14 +65,14 @@ async function calcularIMC() {
 
 async function cadastrarCliente() {
     const dados = {
-        nome: document.getElementById("anime_nome").value,
-        genero: document.getElementById("anime_genero").value,
-        temporadas: document.getElementById("anime_temporadas").value,
-        classificacao: document.getElementById("anime_classificacao").value
+        nome: document.getElementById("nome").value,
+        genero: document.getElementById("genero").value,
+        temporadas: document.getElementById("temporadas").value,
+        classificacao: document.getElementById("classificacao").value
     };
 
     try {
-        const res = await fetch("http://localhost:3000/clientes", {
+        const res = await fetch("http://localhost:3000/anime", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -148,12 +148,12 @@ function logout() {
 }
 
 async function listarClientes() {
-    // Limpar o input de busca
+
     const buscaInput = document.getElementById("busca_nome");
     if (buscaInput) buscaInput.value = "";
 
     try {
-        const res = await fetch("http://localhost:3000/clientes");
+        const res = await fetch("http://localhost:3000/animes");
         const clientes = await res.json();
         renderizarClientes(clientes);
     } catch (erro) {
@@ -174,8 +174,7 @@ async function buscarClientes() {
     try {
         const res = await fetch("http://localhost:3000/clientes");
         const clientes = await res.json();
-        
-        // Filtrar pelo CPF ignorando caracteres não numéricos
+
         const nomeLimpo = nomeBusca.replace(/\D/g, '');
         const filtrados = clientes.filter(c => c.cpf && c.cpf.replace(/\D/g, '') === nomeLimpo);
         renderizarClientes(filtrados);
