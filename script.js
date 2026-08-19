@@ -72,7 +72,7 @@ async function cadastrarCliente() {
     };
 
     try {
-        const res = await fetch("http://localhost:3000/anime", {
+        const res = await fetch("http://localhost:3000/animes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -172,7 +172,7 @@ async function buscarClientes() {
     }
 
     try {
-        const res = await fetch("http://localhost:3000/clientes");
+        const res = await fetch("http://localhost:3000/animes");
         const clientes = await res.json();
 
         const nomeLimpo = nomeBusca.replace(/\D/g, '');
@@ -199,10 +199,10 @@ function renderizarClientes(animes) {
     animes.forEach(animes => {
         html += `
             <div class="client-card">
-                <h3>${animes.nome || 'Sem Nome'}</h3>
-                <p><strong>CPF:</strong> ${animes.genero || '-'}</p>
-                <p><strong>Idade:</strong> ${animes.temporadas || '-'} anos</p>
-                <p><strong>Contato:</strong> ${animes.classificacao || '-'}</p>
+                <hp><strong>Nome:</strong> ${animes.nome || '-'}</hp>
+                <p><strong>genero:</strong> ${animes.genero || '-'}</p>
+                <p><strong>temporadas:</strong> ${animes.temporadas || '-'}</p>
+                <p><strong>classificacao:</strong> ${animes.classificacao || '-'}</p>
             </div>
         `;
     });
