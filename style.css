@@ -24,13 +24,22 @@ h1 {
     padding: 30px;
     border-radius: 10px;
 }
+.pag2 {
+    background-image:url("8236033ffb44963dbe1dcc5cad825151.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 30px;
+    border-radius: 10px;
+}
 h3 {
     color: #1d1547;
     margin-bottom: 40px;
     font-family: 'arial black', sans-serif;
     position: fixed;
     margin-left: 440px;
-    font-size: 35px;
+    font-size: 30px;
 
 }
 
